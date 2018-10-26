@@ -1,8 +1,14 @@
 <template>
   <div class="container">
     <div class="jumbotron">
-      <span v-decorar>Aprende Vue Js 2 Facilmente</span>
+      <!-- <span v-decorar>Aprende Vue Js 2 Facilmente</span> -->
       <!-- v-decorar es la directiva  -->
+
+      <!-- Ahora vamos a pasar el tipo de letras a nuestra directiva -->
+      <!-- <span v-decorar="'Helvetica'">Aprende Vue Js 2 Facilmente</span> -->
+
+      <!-- Queremos que el texxto cambie y sea en negrita -->
+      <span v-decorar.negrilla="'Helvetica'">Aprende Vue Js 2 Facilmente</span>
     </div>
   </div>
 </template>

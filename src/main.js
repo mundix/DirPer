@@ -8,13 +8,16 @@ Vue.directive('decorar',{
   // binding => valores o modificadores que enviemos
   //vnode => algo que vue js usa y no se va a tocar
   bind(el,binding,vnode) {
-    el.style.fontFamily = 'time new roman';
+    //la info que se envia esta dentro de binding
+    // el.style.fontFamily = 'time new roman';
+    el.style.fontFamily = binding.vale;
     el.style.fontWeight = 'bold';
     el.style.fontSize = '24px';
 
   }
 })
 //Esta directiva sera llamada dentro del span , o dentro del elemeto que querrams.
+// ahora queremos pasarle el el tipo de letras que queremos usar
 
 new Vue({
   el: '#app',
