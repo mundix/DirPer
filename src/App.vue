@@ -1,6 +1,10 @@
 <template>
   <div class="container">
     <div class="jumbotron">
+
+      <!-- PAra pasar multiples valores ademas del helvetica lo ponemos como un objeto {} -->
+    <span v-decorar:grande.italico.negrilla="{familia: 'helvetica',color:'red'}">Aprende Vue Js 2 Facilmente</span>
+
       <!-- <span v-decorar>Aprende Vue Js 2 Facilmente</span> -->
       <!-- v-decorar es la directiva  -->
 
@@ -12,7 +16,7 @@
       <!-- Si no quiero la negrilla pongo v-decorar simplemente  -->
 
       <!-- Con : se pasan el argumentos dentro de bindings.arg == 'grande ' -->
-      <span v-decorar:grande.italico.negrilla="'Helvetica'">Aprende Vue Js 2 Facilmente</span>
+      <!-- <span v-decorar:grande.italico.negrilla="'Helvetica'">Aprende Vue Js 2 Facilmente</span> -->
     </div>
   </div>
 </template>

@@ -10,9 +10,15 @@ Vue.directive('decorar',{
   bind(el,binding,vnode) {
     //la info que se envia esta dentro de binding
     // el.style.fontFamily = 'time new roman';
+    // usando binding.value puede ser un solo valor
     // el.style.fontFamily = binding.vale;
     // el.style.fontWeight = 'bold';
+
     el.style.fontSize = '24px';
+
+    // si el objeto {familia: '...',color: '...'}
+    el.style.fontFamilty = binding.value.familia;
+    el.style.color = binding.value.color;
 
     if(binding.arg == 'grande')
     {
