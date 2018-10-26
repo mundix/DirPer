@@ -9,6 +9,7 @@
 
       <!-- Queremos que el texxto cambie y sea en negrita -->
       <span v-decorar.negrilla="'Helvetica'">Aprende Vue Js 2 Facilmente</span>
+      <!-- Si no quiero la negrilla pongo v-decorar simplemente  -->
     </div>
   </div>
 </template>

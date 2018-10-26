@@ -10,9 +10,20 @@ Vue.directive('decorar',{
   bind(el,binding,vnode) {
     //la info que se envia esta dentro de binding
     // el.style.fontFamily = 'time new roman';
-    el.style.fontFamily = binding.vale;
-    el.style.fontWeight = 'bold';
+    // el.style.fontFamily = binding.vale;
+    // el.style.fontWeight = 'bold';
     el.style.fontSize = '24px';
+
+    //Verifica si existe
+    if(binding.modifiers['negrilla'])
+    {
+      el.style.fontWeight = 'bold';
+    }
+
+    if(binding.modifiers['italico'])
+    {
+      el.style.fontStyle = 'italic';
+    }
 
   }
 })
