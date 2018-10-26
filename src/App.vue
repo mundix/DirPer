@@ -8,8 +8,11 @@
       <!-- <span v-decorar="'Helvetica'">Aprende Vue Js 2 Facilmente</span> -->
 
       <!-- Queremos que el texxto cambie y sea en negrita -->
-      <span v-decorar.negrilla="'Helvetica'">Aprende Vue Js 2 Facilmente</span>
+      <!-- <span v-decorar.italico.negrilla="'Helvetica'">Aprende Vue Js 2 Facilmente</span> -->
       <!-- Si no quiero la negrilla pongo v-decorar simplemente  -->
+
+      <!-- Con : se pasan el argumentos dentro de bindings.arg == 'grande ' -->
+      <span v-decorar:grande.italico.negrilla="'Helvetica'">Aprende Vue Js 2 Facilmente</span>
     </div>
   </div>
 </template>

@@ -14,6 +14,15 @@ Vue.directive('decorar',{
     // el.style.fontWeight = 'bold';
     el.style.fontSize = '24px';
 
+    if(binding.arg == 'grande')
+    {
+      el.style.fontSize = '50px';
+    }
+    if(binding.arg == 'pequeno')
+    {
+      el.style.fontSize = '10px';
+    }
+
     //Verifica si existe
     if(binding.modifiers['negrilla'])
     {
@@ -24,6 +33,7 @@ Vue.directive('decorar',{
     {
       el.style.fontStyle = 'italic';
     }
+
 
   }
 })
