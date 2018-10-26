@@ -3,8 +3,9 @@
     <div class="jumbotron">
 
       <!-- PAra pasar multiples valores ademas del helvetica lo ponemos como un objeto {} -->
-    <span v-decorar:grande.italico.negrilla="{familia: 'helvetica',color:'red'}">Aprende Vue Js 2 Facilmente</span>
-
+    <span v-decorar:pequeno.italico.negrilla="{familia: 'helvetica',color:'red'}">Aprende Vue Js 2 Facilmente</span>
+    <hr>
+    <span v-decorar-local:grande.bold.italico="{familia: 'helvetica',color:'green'}">Aprende Angular 2 facilmente</span>
       <!-- <span v-decorar>Aprende Vue Js 2 Facilmente</span> -->
       <!-- v-decorar es la directiva  -->
 
@@ -27,7 +28,34 @@
 // Hay dos formas , globarl y local
 //en main.js de manera global se define la directiva
 export default {
+  //vamos a craar directiva local
+  directives: {
+    'decorar-local': {
+      //pasamos lo miso que tenemos en la directiva global, solo pasamos el bind (el,binding,vnode)
+      bind(el,binding,vnode) {
+        el.style.fontSize = '24px';
+        el.style.fontFamilty = binding.value.familia;
+        el.style.color = binding.value.color;
 
+        if(binding.arg == 'grande')
+        {
+          el.style.fontSize = '50px';
+        }
+        if(binding.arg == 'pequeno')
+        {
+          el.style.fontSize = '10px';
+        }
+        if(binding.modifiers['negrilla'])
+        {
+          el.style.fontWeight = 'bold';
+        }
+        if(binding.modifiers['italico'])
+        {
+          el.style.fontStyle = 'italic';
+        }
+      }
+    }
+  }
 }
 </script>
 
